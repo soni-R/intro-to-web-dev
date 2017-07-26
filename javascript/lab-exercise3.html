@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Lab Three-- Interact</title>
+        
+        <style>
+            div
+            {
+                width: 500px;
+                background-color: #cfcdc3;
+                text-align: center;
+                border: thin solid black;
+            }
+            h1,h2,h3
+            {
+                font-family: Arial, sans-serif;
+            }
+            h3
+            {
+                font-size: 1.25em;
+            }
+        </style>
+        
+        <script>
+            window.onload = function()
+            {
+                document.getElementById('makeCert').addEventListener('click', makeCert, false);
+            }
+            function makeCert()
+            {
+                var firstName = document.getElementById('first').value;
+                var lastName = document.getElementById('last').value;
+                var email = document.getElementById('email').value;
+                var output = "";
+                output = "<h1>THIS CERTIFIES THAT</h1>";
+                output += "<h2>" + firstName + " " + lastName + "</h2>";
+                output += "<h3>" + email + "</h3>";
+                output += "<p>has completed the course <em>Introduction to Web Development</em> from LearnToProgram, Inc.</p>";
+                output += "<img src='../images/signature.jpg' />";
+                document.getElementById('result').innerHTML =output;
+            }
+        </script>
+    </head>
+    
+    <body>
+        <label for="first">First</label><input type="text"
+        id="first" /><br/>
+        <label for="last">Last</label><input type="text"
+        id="last" /><br/>
+        <label for="email">Email</label><input type="text"
+        id="email"/><br/>
+        <button id="makeCert">Make Certificate</button>
+        <div id="result"></div>
+    </body>
+</html>
