@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            body{
+                margin: 0px;
+            }
+            
+            #infoForm{
+                background-color:  rgb(200, 200, 200);
+                width:300px;
+                padding: 5px;
+                border:8px dashed black;
+                font-size: .85em;
+                margin-top: 10px;
+                margin-left: 3px;
+            }
+            
+            #infoForm p{
+                margin-top:4px;
+                margin-bottom:4px;
+            }
+        </style>
+        
+        <script>
+            var first;
+            var last;
+            var email;
+            
+            window.onload = function(){
+                first = document.getElementById('first');
+                last= document.getElementById('last');
+                email = document.getElementById('email');
+                
+                first.addEventListener('blur', firstblur, false);
+                last.addEventListener('blur', lastblur, false);
+                email.addEventListener('blur', emailblur, false);
+            }
+            
+            function firstblur(){
+               // alert('first blur');
+                if(first.value == "" || first.value == null){
+                    //alert("Type in your first name");
+                    first.style.backgroundColor = "#FF0000";
+                }
+                else{
+                    first.style.backgroundColor = "#fff";
+                }
+            }
+            
+            function lastblur(){
+               // alert('first blur');
+                if(last.value == "" || last.value == null){
+                    //alert("Type in your first name");
+                    last.style.backgroundColor = "#FF0000";
+                }
+                else{
+                    last.style.backgroundColor = "#fff";
+                } 
+            }
+            
+            function emailblur(){
+                // alert('first blur');
+                if(email.value == "" || email.value == null){
+                    //alert("Type in your first name");
+                    email.style.backgroundColor = "#FF0000";
+                }
+                else{
+                    email.style.backgroundColor = "#fff";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="infoForm">
+        <p>Please provide your name and email address to be elgible for some fabulous prizes! You may only enter once and you don't need to be present to win!</p>
+            
+        <form action="#" method="post">
+            <label for="first">First</label>
+            <input type="first" id="first" name="first"><br/>
+            
+            <label for="last">Last</label>
+            <input type="last" id="last" name="last"><br/>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"><br/>
+            
+            <button type="submit">Submit</button>
+            
+        </form>
+        </div>    
+    </body>
+</html>
