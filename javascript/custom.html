@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>First custom Js</title>
+    </head>
+    <body>
+        <script>
+            
+            window.onload = function(){
+                var age = prompt("How hold are you?");
+                // alert("you are " + age + " years old");
+                var dogAge = age * 5;
+                // alert(dogAge);  
+                var result = "you are " + dogAge + " years old in dog years.";
+                document.getElementById('dogAgeResult').innerHTML = result;
+            }
+           
+        </script>
+        <div id="dogAgeResult"></div>
+    </body>
+</html>
